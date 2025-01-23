@@ -1,6 +1,18 @@
 //Bruteforce
 
+ public static int maxSubarraySum(int[] arr, int n) {
+        int maxi = Integer.MIN_VALUE; // maximum sum
 
+        for (int i = 0; i < n; i++) {
+            int sum = 0;
+            for (int j = i; j < n; j++) {
+                sum += arr[j];
+                maxi = Math.max(maxi, sum); // getting the maximum
+            }
+        }
+
+        return maxi;
+    }
 
 
 //OPTIMAL
